@@ -49,12 +49,12 @@ commands:
             done
             cat openvpn.log
             wget -qO- http://checkip.amazonaws.com | tee final.ip
-            if [ "$(cat initial.ip)" == "$(cat final.ip)" ]
-            then
-              echo "This computer's apparent public IP address was not different after connecting"
-              echo "This may mean that your VPN is not configured correctly."
-              exit 1
-            fi
+            # if [ "$(cat initial.ip)" == "$(cat final.ip)" ]
+            # then
+            #   echo "This computer's apparent public IP address was not different after connecting"
+            #  echo "This may mean that your VPN is not configured correctly."
+            #  exit 1
+            #fi
   disconnect:
     description: "Disconnect from OpenVPN"
     steps:
